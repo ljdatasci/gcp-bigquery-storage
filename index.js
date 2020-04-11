@@ -83,31 +83,7 @@ async function loadCSVFromGCS(){
   const metadata = {
     sourceFormat: 'CSV',
     skipLeadingRows: 1,
-    schema: {
-      fields: [
-        {name: 'Organization_Code', type: 'STRING'},
-        {name: 'Organization_Sub_Code', type: 'STRING'},
-        {name: 'Type', type: 'STRING'},
-        {name: 'Fiscal_Year', type: 'STRING'},
-        {name: 'Agency_Code', type: 'STRING'},
-        {name: 'Unit_Code', type: 'STRING'},
-        {name: 'Unit_Name', type: 'STRING'},
-        {name: 'Program_Code', type: 'STRING'},
-        {name: 'Program_Name', type: 'STRING'},
-        {name: 'Subprogram_Code', type: 'STRING'},
-        {name: 'Subprogram_Name', type: 'STRING'},
-        {name: 'Object_Code', type: 'STRING'},
-        {name: 'Object_Name', type: 'STRING'},
-        {name: 'Comptroller_Subobject_Code', type: 'STRING'},
-        {name: 'Agency_Subobject_Code', type: 'STRING'},
-        {name: 'Agency_Subobject_Name', type: 'STRING'},
-        {name: 'Fund_Type_Name', type: 'STRING'},
-        {name: 'Budget', type: 'INTEGER'},
-        {name: 'Descripting', type: 'STRING'},
-        {name: 'Category', type: 'INTEGER'},
-        {name: 'Category_Title', type: 'STRING'}
-      ],
-    },
+    schema: schema
   };
 
   const [job] = await bigquery
