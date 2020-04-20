@@ -2,7 +2,7 @@
 const {BigQuery} = require('@google-cloud/bigquery');
 
 const options = {
-    keyFilename: './contact-form-253313-2ecf6555cb3d.json',
+    keyFilename: '/path/to/keyfile.json',
     projectId: 'contact-form-253313',
   };
 
